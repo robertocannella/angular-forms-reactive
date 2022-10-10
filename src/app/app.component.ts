@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -6,8 +6,13 @@ import { FormGroup } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  ngOnInit(): void {
+    this.signupForm = new FormGroup({
+      
+    })
+  }
   genders = ['male', 'female'];
   signupForm: FormGroup;
-  
+
 }
