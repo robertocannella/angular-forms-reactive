@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
-import { resolve } from 'dns';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
