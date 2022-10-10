@@ -22,6 +22,13 @@
             <input type="radio" [value]="gender" formControlName="gender">{{ gender }}
           </label>
         </div>
+        <div formArrayName="hobbies">
+        <h4>Your Hobbies</h4>
+        <div class="form-group" *ngFor="let hobbyControl of getControls(); let i = index;">
+          <input type="text" class="form-control" [formControlName]="i">
+        </div>
+        <button type="button" class="btn btn-default" (click)="onAddHobby()">Add Hobby</button>
+       </div>
         <button class="btn btn-primary" type="submit">Submit</button>
         <span *ngIf="!signupForm.valid && signupForm.touched" class="help-block">Please enter a valid data.</span>
       </form>
